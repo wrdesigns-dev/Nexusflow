@@ -1,0 +1,184 @@
+/* NexusFlow Custom Dark Theme */
+:root {
+  /* Dark Mode Color Palette */
+  --nexus-charcoal: #121212;
+  --nexus-surface: #1a1a1a;
+  --nexus-surface-elevated: #242424;
+  --nexus-teal: #00d4aa;
+  --nexus-teal-dark: #00b894;
+  --nexus-mint: #5eead4;
+  --nexus-white: #ffffff;
+  --nexus-silver: #a0a0a0;
+  --nexus-border: rgba(255, 255, 255, 0.1);
+  --nexus-glow: rgba(0, 212, 170, 0.3);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--nexus-charcoal);
+  color: var(--nexus-white);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--nexus-border);
+}
+
+/* Glow Effect */
+.glow-border {
+  box-shadow: 0 0 20px var(--nexus-glow);
+}
+
+.glow-text {
+  text-shadow: 0 0 30px var(--nexus-glow);
+}
+
+/* Card Lift Effect */
+.card-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px var(--nexus-glow);
+  border-color: var(--nexus-teal);
+}
+
+/* Gradient Button Transition */
+.btn-gradient {
+  background: var(--nexus-teal);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, var(--nexus-teal) 0%, var(--nexus-mint) 100%);
+  box-shadow: 0 8px 24px rgba(0, 212, 170, 0.4);
+}
+
+/* Parallax Background */
+.parallax-bg {
+  background: linear-gradient(180deg, 
+    var(--nexus-charcoal) 0%, 
+    #1a1a2e 50%, 
+    var(--nexus-charcoal) 100%
+  );
+  transition: background-position 0.3s ease-out;
+}
+
+/* Network Graph Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-node {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Scroll Fade In */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Typography Classes */
+.text-serif {
+  font-family: var(--font-serif);
+}
+
+.text-sans {
+  font-family: var(--font-sans);
+}
+
+/* Logo Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Metrics Counter Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metric-item {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* Technical Grid Pattern */
+.tech-grid {
+  background-image: 
+    linear-gradient(var(--nexus-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nexus-border) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nexus-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nexus-teal);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nexus-mint);
+}
