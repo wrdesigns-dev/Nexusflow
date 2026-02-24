@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Github, Linkedin, Twitter } from "lucide-react";
+import logo from "figma:asset/12872256e8193e70901ed0951c69a226eb7d78f2.png";
 
 export function Footer() {
   return (
@@ -8,11 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-[var(--nexus-teal)] to-[var(--nexus-mint)] rounded-lg flex items-center justify-center">
-                <span className="font-bold text-[var(--nexus-charcoal)]">N</span>
-              </div>
-              <span className="text-xl font-bold text-serif">NexusFlow</span>
+            <div className="flex items-center">
+              <img 
+                src={logo} 
+                alt="NexusFlow" 
+                className="h-7 md:h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-[var(--nexus-silver)] text-sm">
               AI-driven resource allocation for enterprise teams

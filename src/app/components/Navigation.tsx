@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "figma:asset/12872256e8193e70901ed0951c69a226eb7d78f2.png";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-[var(--nexus-teal)] to-[var(--nexus-mint)] rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-[var(--nexus-charcoal)]">N</span>
-            </div>
-            <span className="text-2xl font-bold text-serif">NexusFlow</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logo} 
+              alt="NexusFlow" 
+              className="h-8 md:h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
