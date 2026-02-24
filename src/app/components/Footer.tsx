@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import logo from "../../asset/nexusflow.png";
+import logo from "../../assets/nexusflow.png";
 
 export function Footer() {
   return (
