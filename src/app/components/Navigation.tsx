@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../../asset/nexusflow.png";
+import logo from "../../assets/nexusflow.png";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
