@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "figma:asset/12872256e8193e70901ed0951c69a226eb7d78f2.png";
+import logo from "../../asset/12872256e8193e70901ed0951c69a226eb7d78f2.png";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
